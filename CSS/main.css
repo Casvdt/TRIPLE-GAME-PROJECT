@@ -1,0 +1,46 @@
+html * {
+    font-size: 1em !important;
+    color: #ffffff !important;
+    font-family: Arial, sans-serif !important;
+}
+
+body {
+    background-color: rgb(20, 20, 20)
+}
+
+main {
+    margin: auto;
+    padding-top: 2px;
+    padding-left: 500px;
+}
+
+button {
+    display: inline-block;
+    padding: 15px 25px;
+    font-size: 24px;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    outline: none;
+    color: #fff;
+    background-color: #ac0b0b;
+    border: none;
+    border-radius: 15px;
+}
+
+button:hover {
+    background-color: #490303
+}
+
+button:active {
+    background-color: #ff0000;
+    transform: translateY(4px);
+}
+
+footer {
+    margin-top: 260px;
+}
+
+.Mbuttons{
+    margin-left: 250px;
+}

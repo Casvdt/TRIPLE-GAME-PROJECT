@@ -1,4 +1,4 @@
-html * {
+ html * {
     margin:0;
     padding: 0;
     box-sizing: border-box;
@@ -12,9 +12,9 @@ body {
 }
 
 main {
-    margin: auto;
+    /* margin: auto; */
     padding-top: 2px;
-    padding-left: 500px;
+    /* padding-left: 500px; */
 }
 
 button {
@@ -45,7 +45,8 @@ footer {
 }
 
 .Mbuttons{
-    margin-left: 250px;
+   column-count: 3;
+   column-fill: balance;
 }
 
 .gamebuttons{
@@ -55,20 +56,27 @@ footer {
 }
 
 .tictactoebutton{
-margin-right: 200px;
+/* margin-right: 200px; */
 }
 
 
 .whackamolebutton{
-    margin-left: 200px;
-}
+    /* margin-left: 200px; */
+} 
 
 
-img {
-    margin-top: 150px;
-    margin-right: 100px;
-}
+ img {
+      margin-top: 150px; 
+    
+ }  
 
 .imggames{
-    
+    column-count: 3;
+    column-fill: balance;
+
 }
+.text-center{
+    text-align: center;
+
+}
+

@@ -56,13 +56,17 @@ footer {
 }
 
 .tictactoebutton{
-/* margin-right: 200px; */
+margin-left: 230px;
 }
 
 
 .whackamolebutton{
-    /* margin-left: 200px; */
+    margin-left: 480px;
 } 
+
+.battleshipstbutton{
+    margin-left: 510px;
+}
 
 
  img {

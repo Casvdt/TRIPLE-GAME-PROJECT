@@ -24,7 +24,7 @@ function randomHole(holes) {
 }
 
 function peep() {
-  const time = randomTime(400, 800);
+  const time = randomTime(600, 800);
   const hole = randomHole(holes);
   hole.classList.add('up');
   setTimeout(() => {
@@ -43,7 +43,7 @@ function startGame() {
     timeUp = true;
     button.innerHTML = 'Try again?'
     button.style.visibility = 'visible';
-  }, 20000);
+  }, 25000);
 }
 
 function bonk(e) {

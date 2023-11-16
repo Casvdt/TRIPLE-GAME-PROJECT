@@ -14,6 +14,7 @@ html {
 }
 
 body {
+  cursor: url(/IMG/hammer-3048992-2563884.png), auto; 
   padding: 0;
   margin: 0;
   font-family: 'Nunito', sans-serif;
@@ -103,3 +104,6 @@ h2 {
 #start:hover {
   opacity: 0.8;
 }
+
+
+  

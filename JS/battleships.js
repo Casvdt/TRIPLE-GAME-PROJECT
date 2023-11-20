@@ -13,7 +13,7 @@ var model = {
 	fire: function(guess) {
 		for (var i = 0; i < this.numShips; i++) {
 			var ship = this.ships[i];
-			var index = ship.locations.indexOf(guess); // przesukuje tablice w celu znalezienia guess i zwraca indeks
+			var index = ship.locations.indexOf(guess);
 		  if (ship.hits[index] === "hit") {
 				view.displayMessage("You hit this ship before.");
 				return true;
@@ -58,10 +58,10 @@ var model = {
 		var direction = Math.floor(Math.random() * 2);
 		var row, col;
 
-		if (direction === 1) {  //rozmieszczamy w poziomie
+		if (direction === 1) {
 			row = Math.floor(Math.random() * this.boardSize);
 			col = Math.floor(Math.random() * (this.boardSize - this.shipLength));
-		} else { //rozmieszczmay w pionie
+		} else { 
 			row = Math.floor(Math.random() * (this.boardSize - this.shipLength));
 			col = Math.floor(Math.random() * this.boardSize);
 		}

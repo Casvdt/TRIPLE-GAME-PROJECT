@@ -1,5 +1,7 @@
 @import url('https://fonts.googleapis.com/css?family=Nunito');
 
+html{cursor: url(/IMG/Naamloos.png), auto; }
+
 *, *:before, *:after {
   -webkit-box-sizing: inherit;
   -moz-box-sizing: inherit;
@@ -14,7 +16,6 @@ html {
 }
 
 body {
-  cursor: url(/IMG/Naamloos.png), auto; 
   padding: 0;
   margin: 0;
   font-family: 'Nunito', sans-serif;
@@ -64,7 +65,7 @@ h2 {
 
 .hole:after {
   display: block;
-  background: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/1159990/dirt.svg') bottom center no-repeat;
+  background: url('https://www.kindpng.com/picc/m/149-1491187_transparent-grietas-png-cartoon-hole-in-the-ground.png') bottom center no-repeat;
   background-size: contain;
   content: '';
   width: 100%;
@@ -104,7 +105,8 @@ h2 {
 #start:hover {
   opacity: 0.8;
   cursor: url(/IMG/Naamloos.png), auto; 
+  
 }
 
 
-  
+/* https://s3-us-west-2.amazonaws.com/s.cdpn.io/1159990/dirt.svg */

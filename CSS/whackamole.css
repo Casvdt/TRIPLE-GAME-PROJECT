@@ -14,7 +14,7 @@ html {
 }
 
 body {
-  cursor: url(/IMG/Red-Orange-Pixel.png), auto; 
+  cursor: url(/IMG/Naamloos.png), auto; 
   padding: 0;
   margin: 0;
   font-family: 'Nunito', sans-serif;
@@ -103,6 +103,7 @@ h2 {
 
 #start:hover {
   opacity: 0.8;
+  cursor: url(/IMG/Naamloos.png), auto; 
 }
 
 

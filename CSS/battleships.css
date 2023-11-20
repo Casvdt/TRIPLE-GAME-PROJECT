@@ -133,3 +133,24 @@ td div {
   transform: rotate(90deg);
   box-shadow: 3px -3px #ffffff;
 }
+.restart {
+  display: inline-block;
+  padding: 15px 25px;
+  font-size: 20px;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  outline: none;
+  color: #fff;
+  background-color: darkred;
+  border: none;
+  border-radius: 15px;
+  margin-top: 100px;
+  margin-left: 900px;
+
+}
+
+.restart:hover {
+  cursor: pointer;
+  background-color: rgb(199, 5, 5);
+}

@@ -20,34 +20,34 @@ let currentPlayer = "X";
 let running = false;
 
 initializeGame();
-function initializeGame(){
-cells.forEach(cell => cell.addEventListener("click", cellClicked));
-restartButton.addEventListener("click", restartGame);
-turnText.textContent = `${currentPlayer}'s turn`;
-running = true;
+function initializeGame() {
+    cells.forEach(cell => cell.addEventListener("click", cellClicked));
+    restartButton.addEventListener("click", restartGame);
+    turnText.textContent = `${currentPlayer}'s turn`;
+    running = true;
 }
 
-function cellClicked(){
-const cellIndex = this.getAttribute(cellIndex);
+function cellClicked() {
+    const cellIndex = this.getAttribute("cellIndex");
 
-if (options [cellIndex] != "" || !running)
-return;
-}
+    if (options[cellIndex] != "" || !running) {
+        return;
+    }
 
-updateCell(this, cellIndex);
-checkWinner();
-
-
-function updateCell(cell,index){
-options[index] = currentPlayer;
-cell.textContent = currentPlayer;
-}
-function changePlayer(){
+    updateCell(this, cellIndex);
+    checkWinner();
 
 }
-function checkWinner(){
+function updateCell(cell, index) {
+    options[index] = currentPlayer;
+    cell.textContent = currentPlayer;
+}
+function changePlayer() {
 
 }
-function restartGame(){
+function checkWinner() {
+
+}
+function restartGame() {
 
 }

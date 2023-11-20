@@ -1,0 +1,82 @@
+h1 {
+    line-height: 1em;
+    margin-top: 100;
+    padding-bottom: 5px;
+    font-size: 2.8em;
+    font-weight: bold;
+  }
+ 
+ 
+ 
+  td {
+    width: 150px;
+    height: 150px;
+  }
+ 
+ 
+ 
+  .first {
+    border-left: 2px solid white;
+    border-right: 2px solid white;
+  }
+ 
+  .second {
+    border-top: 2px solid white;
+    border-bottom: 2px solid white;
+  }
+ 
+ 
+ 
+  body {
+    cursor: url(/IMG/material-cheese-pointer.png), auto;
+    cursor: ;
+    background-color: rgb(32, 32, 32);
+    background-image: url("https://janschreiber.github.io/img2/black-chalk.jpg");
+    color: rgb(230, 230, 230);
+    text-align: center;
+    font-family: 'Indie Flower', 'Comic Sans', cursive;
+    font-size: 0.7em;
+  }
+ 
+  h1 {
+    line-height: 1em;
+    margin-bottom: 0;
+    padding-bottom: 5px;
+    font-size: 2.8em;
+    font-weight: bold;
+  }
+ 
+ 
+  table {
+    margin: 2% auto;
+    border-collapse: collapse;
+    margin-top: 50px;
+    border: solid white;
+ 
+  }
+ 
+ 
+ 
+  button {
+    display: inline-block;
+    padding: 15px 25px;
+    font-size: 20px;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    outline: none;
+    color: #fff;
+    background-color: darkred;
+    border: none;
+    border-radius: 15px;
+    margin-top: 50px;
+ 
+  }
+ 
+  button:hover {
+    cursor: url(/IMG/material-cheese-pointer.png), auto;
+    background-color: rgb(199, 5, 5);
+  }
+
+
+ 

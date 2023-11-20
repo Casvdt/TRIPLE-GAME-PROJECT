@@ -5,33 +5,43 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Tic tac toe</title>
+
   <link rel="stylesheet" href="/CSS/tictactoe.css">
+
 </head>
 
 <body>
 
-  <h1>Tic Tac Toe</h1>
+  <div class="gameContainer">
+    <h1>Tic Tac Toe</h1>
+  </div>
 
-  <button class="start-button">Start</button>
 
-  <button class="credits-button">Credits</button>
-  <table>
-    <tr>
-      <td></td>
-      <td class="first"></td>
-      <td></td>
-    </tr>
-    <tr>
-      <td class="second"></td>
-      <td class="first second"></td>
-      <td class="second"></td>
-    </tr>
-    <tr>
-      <td></td>
-      <td class="first"></td>
-      <td></td>
-    </tr>
-  </table>
+
+  <div class="cellContainer">
+    <div cellIndex="0" class="cell"></div>
+    <div cellIndex="1" class="cell"></div>
+    <div cellIndex="2" class="cell"></div>
+    <div cellIndex="3" class="cell"></div>
+    <div cellIndex="4" class="cell"></div>
+    <div cellIndex="5" class="cell"></div>
+    <div cellIndex="6" class="cell"></div>
+    <div cellIndex="7" class="cell"></div>
+    <div cellIndex="8" class="cell"></div>
+  </div>
+
+
+
+
+  <!-- <nav>
+    <button class="start-button">Start</button>
+
+    <a href="/HTML/creditstictactoe.html"><button class="credits-button">Credits</button>
+    </a>
+  </nav> -->
+
+  <h2 class="turnText"></h2>
+  <button class="restartButton">Restart</button>
 
 
   <div class="Background-audio">
@@ -39,6 +49,11 @@
       <source src="/AUDIO/Shreksophone (Original).mp3" type="" />
     </audio>
   </div>
+
+
+
+
+
 
 
 

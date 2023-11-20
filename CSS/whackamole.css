@@ -65,7 +65,7 @@ h2 {
 
 .hole:after {
   display: block;
-  background: url('https://www.kindpng.com/picc/m/149-1491187_transparent-grietas-png-cartoon-hole-in-the-ground.png') bottom center no-repeat;
+  background: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/1159990/dirt.svg') bottom center no-repeat;
   background-size: contain;
   content: '';
   width: 100%;
@@ -100,6 +100,7 @@ h2 {
   padding: 1rem 2rem;
   cursor: pointer;
   margin: 1rem;
+  cursor: url(/IMG/Naamloos.png), auto;
 }
 
 #start:hover {
@@ -109,4 +110,4 @@ h2 {
 }
 
 
-/* https://s3-us-west-2.amazonaws.com/s.cdpn.io/1159990/dirt.svg */
+

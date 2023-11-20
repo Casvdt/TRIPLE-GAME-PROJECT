@@ -1,6 +1,7 @@
 const cells = document.querySelectorAll(".cell");
 const turnText = document.querySelector(".turnText");
 const restartButton = document.querySelector(".restartButton");
+const creditsButton = document.querySelector(".creditsButton")
 
 
 
@@ -84,3 +85,5 @@ function restartGame() {
     cells.forEach(cell => cell.textContent = "");
     running = true;
 }
+
+

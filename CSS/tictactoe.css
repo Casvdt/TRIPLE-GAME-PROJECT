@@ -84,3 +84,9 @@ html{cursor: url(/IMG/Naamloos.png), auto; }
    cursor: pointer;
    background-color: rgb(199, 5, 5);
  }
+
+
+ .currentPlayer {
+  color: red;
+  background-color: red;
+ }

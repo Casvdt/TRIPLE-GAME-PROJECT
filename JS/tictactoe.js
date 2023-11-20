@@ -68,19 +68,19 @@ function checkWinner() {
         turnText.textContent = ` ${currentPlayer} wins!`;
         running = false;
     }
-    else if(!options.includes("")){
+    else if (!options.includes("")) {
         turnText.textContent = `Draw!`;
         running = false;
-    } 
-    else{
+    }
+    else {
         changePlayer();
     }
 }
 
 function restartGame() {
-currentPlayer = "X"; 
-options = ["", "", "", "", "", "", "", "", ""];
-turnText.textContent = `${currentPlayer}'s turn`;
-cells.forEach(cell => cell.textContent = "");
-running = true; 
+    currentPlayer = "X";
+    options = ["", "", "", "", "", "", "", "", ""];
+    turnText.textContent = `${currentPlayer}'s turn`;
+    cells.forEach(cell => cell.textContent = "");
+    running = true;
 }

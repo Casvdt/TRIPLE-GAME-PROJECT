@@ -1,7 +1,7 @@
 const cells = document.querySelectorAll(".cell");
 const turnText = document.querySelector(".turnText");
 const restartButton = document.querySelector(".restartButton");
-
+const button = document.querySelector('.start');
 
 
 const winConditions = [
@@ -76,6 +76,8 @@ function checkWinner() {
         changePlayer();
     }
 }
+
+
 
 function restartGame() {
     currentPlayer = "X";

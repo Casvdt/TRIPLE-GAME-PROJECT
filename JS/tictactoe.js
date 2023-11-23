@@ -1,7 +1,6 @@
 const cells = document.querySelectorAll(".cell");
 const turnText = document.querySelector(".turnText");
 const restartButton = document.querySelector(".restartButton");
-const creditsButton = document.querySelector(".creditsButton")
 
 
 
@@ -26,6 +25,7 @@ function initializeGame() {
     cells.forEach(cell => cell.addEventListener("click", cellClicked));
     restartButton.addEventListener("click", restartGame);
     turnText.textContent = `${currentPlayer}'s turn`;
+    
     running = true;
 }
 
@@ -39,6 +39,8 @@ function cellClicked() {
     updateCell(this, cellIndex);
     checkWinner();
 }
+
+
 
 function updateCell(cell, index) {
     options[index] = currentPlayer;

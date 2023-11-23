@@ -21,6 +21,7 @@ body {
   font-family: 'Nunito', sans-serif;
   background-color: rgb(0, 0, 0);
   text-align: center;
+    background-image: url("/IMG/wallpaper-mario-fond-rouge-jeux-video.jpeg");
 }
 
 
@@ -89,7 +90,7 @@ h2 {
   top: 0;
 }
 
-#start {
+.start {
   font-family: 'Nunito', sans-serif;
   display: inline-block;
   text-decoration: none;
@@ -103,7 +104,7 @@ h2 {
   cursor: url(/IMG/Naamloos.png), auto;
 }
 
-#start:hover {
+.start:hover {
   opacity: 0.8;
   cursor: url(/IMG/Naamloos.png), auto; 
   

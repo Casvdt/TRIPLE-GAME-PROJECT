@@ -78,6 +78,8 @@ function checkWinner() {
     }
 }
 
+
+
 function restartGame() {
     currentPlayer = "X";
     options = ["", "", "", "", "", "", "", "", ""];

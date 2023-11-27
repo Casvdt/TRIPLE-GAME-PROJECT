@@ -1,3 +1,8 @@
+const restartButton = document.querySelector(".restartButton");
+
+
+
+
 var model = {
 	boardSize: 7,
 	numShips: 3,
@@ -13,7 +18,7 @@ var model = {
 	fire: function(guess) {
 		for (var i = 0; i < this.numShips; i++) {
 			var ship = this.ships[i];
-			var index = ship.locations.indexOf(guess); // przesukuje tablice w celu znalezienia guess i zwraca indeks
+			var index = ship.locations.indexOf(guess); 
 		  if (ship.hits[index] === "hit") {
 				view.displayMessage("You hit this ship before.");
 				return true;
@@ -50,7 +55,7 @@ var model = {
 			} while (this.collision(locations));
 				this.ships[i].locations = locations;
 		}
-				console.log("Tablica okrętów: ");
+				console.log("Table board: ");
 		console.log(this.ships);
 	},
 
@@ -58,10 +63,10 @@ var model = {
 		var direction = Math.floor(Math.random() * 2);
 		var row, col;
 
-		if (direction === 1) {  //rozmieszczamy w poziomie
+		if (direction === 1) {  
 			row = Math.floor(Math.random() * this.boardSize);
 			col = Math.floor(Math.random() * (this.boardSize - this.shipLength));
-		} else { //rozmieszczmay w pionie
+		} else { 
 			row = Math.floor(Math.random() * (this.boardSize - this.shipLength));
 			col = Math.floor(Math.random() * this.boardSize);
 		}
@@ -140,4 +145,14 @@ function answer(eventObj) {
 	var shot = eventObj.target;
 	var location = shot.id;
 	controller.processGuess(location);
+}
+
+
+function initializeGame() {
+    restartButton.addEventListener("click", restartGame);
+    running = true;
+}
+
+function restartGame() {
+    running = true;
 }

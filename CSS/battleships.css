@@ -11,6 +11,7 @@ h1 {
 }
 
 body {
+  cursor: url(/IMG/Naamloos.png), auto;
 	background: #000000;
 }
 
@@ -133,11 +134,10 @@ td div {
   transform: rotate(90deg);
   box-shadow: 3px -3px #ffffff;
 }
-.restart {
+.restartButton {
   display: inline-block;
   padding: 15px 25px;
   font-size: 20px;
-  cursor: pointer;
   text-align: center;
   text-decoration: none;
   outline: none;
@@ -147,10 +147,10 @@ td div {
   border-radius: 15px;
   margin-top: 100px;
   margin-left: 900px;
-
+  cursor: url(/IMG/Naamloos.png), auto;
 }
 
-.restart:hover {
-  cursor: pointer;
+.restartButton:hover {
+  cursor: url(/IMG/Naamloos.png), auto; 
   background-color: rgb(199, 5, 5);
 }

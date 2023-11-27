@@ -25,6 +25,7 @@ function initializeGame() {
     cells.forEach(cell => cell.addEventListener("click", cellClicked));
     restartButton.addEventListener("click", restartGame);
     turnText.textContent = `${currentPlayer}'s turn`;
+    
     running = true;
 }
 
@@ -38,6 +39,8 @@ function cellClicked() {
     updateCell(this, cellIndex);
     checkWinner();
 }
+
+
 
 function updateCell(cell, index) {
     options[index] = currentPlayer;
@@ -77,6 +80,8 @@ function checkWinner() {
     }
 }
 
+
+
 function restartGame() {
     currentPlayer = "X";
     options = ["", "", "", "", "", "", "", "", ""];
@@ -84,3 +89,5 @@ function restartGame() {
     cells.forEach(cell => cell.textContent = "");
     running = true;
 }
+
+

@@ -21,6 +21,7 @@ body {
   font-family: 'Nunito', sans-serif;
   background-color: rgb(0, 0, 0);
   text-align: center;
+    background-image: url("/IMG/268489-large-red-background-1920x1080-images.jpg");
 }
 
 
@@ -33,7 +34,7 @@ h1 {
 
 h2 {
   font-size: 3rem;
-  color: #b62323;
+  color: #ffffff;
   margin: 2rem;
 }
 
@@ -65,7 +66,7 @@ h2 {
 
 .hole:after {
   display: block;
-  background: url('https://www.kindpng.com/picc/m/149-1491187_transparent-grietas-png-cartoon-hole-in-the-ground.png') bottom center no-repeat;
+  background: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/1159990/dirt.svg') bottom center no-repeat;
   background-size: contain;
   content: '';
   width: 100%;
@@ -89,7 +90,7 @@ h2 {
   top: 0;
 }
 
-#start {
+.start {
   font-family: 'Nunito', sans-serif;
   display: inline-block;
   text-decoration: none;
@@ -100,13 +101,14 @@ h2 {
   padding: 1rem 2rem;
   cursor: pointer;
   margin: 1rem;
+  cursor: url(/IMG/Naamloos.png), auto;
 }
 
-#start:hover {
+.start:hover {
   opacity: 0.8;
   cursor: url(/IMG/Naamloos.png), auto; 
   
 }
 
 
-/* https://s3-us-west-2.amazonaws.com/s.cdpn.io/1159990/dirt.svg */
+

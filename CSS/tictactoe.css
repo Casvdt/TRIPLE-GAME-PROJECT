@@ -91,3 +91,11 @@ html{cursor: url(/IMG/Naamloos.png), auto;}
  }
 
 
+.text-center{
+  text-align: center;
+}
+
+.credits{
+  column-count: 5;
+  column-fill: balance;
+}

@@ -4,6 +4,11 @@ const restartButton = document.querySelector(".restartButton");
 
 
 
+let player1Credits = 0;
+let playerCredits = document.querySelector(".playerCredits")          
+
+
+
 const winConditions = [
     [0, 1, 2],
     [3, 4, 5],
@@ -15,6 +20,8 @@ const winConditions = [
     [2, 4, 6]
 ];
 
+
+
 let options = ["", "", "", "", "", "", "", "", ""];
 let currentPlayer = "X";
 let running = false;
@@ -25,7 +32,6 @@ function initializeGame() {
     cells.forEach(cell => cell.addEventListener("click", cellClicked));
     restartButton.addEventListener("click", restartGame);
     turnText.textContent = `${currentPlayer}'s turn`;
-    
     running = true;
 }
 
@@ -70,6 +76,7 @@ function checkWinner() {
     if (roundWon) {
         turnText.textContent = ` ${currentPlayer} wins!`;
         running = false;
+        
     }
     else if (!options.includes("")) {
         turnText.textContent = `Draw!`;
@@ -79,8 +86,6 @@ function checkWinner() {
         changePlayer();
     }
 }
-
-
 
 function restartGame() {
     currentPlayer = "X";

@@ -1,8 +1,21 @@
+<<<<<<< HEAD
 // var model = {
 // 	boardSize: 7,
 // 	numShips: 3,
 // 	shipLength: 3,
 // 	shipsSunk: 0,
+=======
+const restartButton = document.querySelector(".restartButton");
+
+
+
+
+var model = {
+	boardSize: 7,
+	numShips: 3,
+	shipLength: 3,
+	shipsSunk: 0,
+>>>>>>> 296c01faaf0774bc05c23acfffc2131911f43779
 
 // 	ships:[
 // 		{ locations: [0, 0, 0], hits: ["", "", ""] },
@@ -10,6 +23,7 @@
 // 		{ locations: [0, 0, 0], hits: ["", "", ""] }
 // 	],
 
+<<<<<<< HEAD
 // 	fire: function(guess) {
 // 		for (var i = 0; i < this.numShips; i++) {
 // 			var ship = this.ships[i];
@@ -32,6 +46,30 @@
 // 		view.displayMessage("It's a miss!");
 // 		return false;
 // 	},
+=======
+	fire: function(guess) {
+		for (var i = 0; i < this.numShips; i++) {
+			var ship = this.ships[i];
+			var index = ship.locations.indexOf(guess); 
+		  if (ship.hits[index] === "hit") {
+				view.displayMessage("You hit this ship before.");
+				return true;
+			} else if (index >= 0) {
+					ship.hits[index] = "hit";
+					view.displayHit(guess);
+					view.displayMessage("It's a hit!");
+					if (this.isSunk(ship)) {
+						view.displayMessage("You sunk my battleship!");
+						this.shipsSunk++;
+					}
+					return true;
+				}
+		}
+		view.displayMiss(guess);
+		view.displayMessage("It's a miss!");
+		return false;
+	},
+>>>>>>> 296c01faaf0774bc05c23acfffc2131911f43779
 
 // 	isSunk: function(ship) {
 // 		for (i = 0; i < this.shipLength; i++) {
@@ -42,6 +80,7 @@
 // 		return true;
 // 	},
 
+<<<<<<< HEAD
 // 	generateShipLocations: function() {
 // 		var locations;
 // 		for (var i = 0; i < this.numShips; i++) {
@@ -53,11 +92,25 @@
 // 				console.log("Tablica okrętów: ");
 // 		console.log(this.ships);
 // 	},
+=======
+	generateShipLocations: function() {
+		var locations;
+		for (var i = 0; i < this.numShips; i++) {
+			do {
+				locations = this.generateShip();
+			} while (this.collision(locations));
+				this.ships[i].locations = locations;
+		}
+				console.log("Table board: ");
+		console.log(this.ships);
+	},
+>>>>>>> 296c01faaf0774bc05c23acfffc2131911f43779
 
 // 	generateShip: function() {
 // 		var direction = Math.floor(Math.random() * 2);
 // 		var row, col;
 
+<<<<<<< HEAD
 // 		if (direction === 1) {  //rozmieszczamy w poziomie
 // 			row = Math.floor(Math.random() * this.boardSize);
 // 			col = Math.floor(Math.random() * (this.boardSize - this.shipLength));
@@ -65,6 +118,15 @@
 // 			row = Math.floor(Math.random() * (this.boardSize - this.shipLength));
 // 			col = Math.floor(Math.random() * this.boardSize);
 // 		}
+=======
+		if (direction === 1) {  
+			row = Math.floor(Math.random() * this.boardSize);
+			col = Math.floor(Math.random() * (this.boardSize - this.shipLength));
+		} else { 
+			row = Math.floor(Math.random() * (this.boardSize - this.shipLength));
+			col = Math.floor(Math.random() * this.boardSize);
+		}
+>>>>>>> 296c01faaf0774bc05c23acfffc2131911f43779
 
 // 		var newShipLocations = [];
 // 		for (var i = 0; i < this.shipLength; i++) {

@@ -1,5 +1,7 @@
 @import url('https://fonts.googleapis.com/css?family=Nunito');
 
+html{cursor: url(/IMG/Naamloos.png), auto; }
+
 *, *:before, *:after {
   -webkit-box-sizing: inherit;
   -moz-box-sizing: inherit;
@@ -14,12 +16,12 @@ html {
 }
 
 body {
-  cursor: url(/IMG/holidays-labour-day-custom-cursor.png), auto; 
   padding: 0;
   margin: 0;
   font-family: 'Nunito', sans-serif;
   background-color: rgb(0, 0, 0);
   text-align: center;
+    background-image: url("/IMG/wallpaperflare.com_wallpaper.jpg");
 }
 
 
@@ -32,7 +34,7 @@ h1 {
 
 h2 {
   font-size: 3rem;
-  color: #b62323;
+  color: #ffffff;
   margin: 2rem;
 }
 
@@ -88,7 +90,7 @@ h2 {
   top: 0;
 }
 
-#start {
+.start {
   font-family: 'Nunito', sans-serif;
   display: inline-block;
   text-decoration: none;
@@ -99,11 +101,14 @@ h2 {
   padding: 1rem 2rem;
   cursor: pointer;
   margin: 1rem;
+  cursor: url(/IMG/Naamloos.png), auto;
 }
 
-#start:hover {
+.start:hover {
   opacity: 0.8;
+  cursor: url(/IMG/Naamloos.png), auto; 
+  
 }
 
 
-  
+

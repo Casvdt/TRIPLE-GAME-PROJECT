@@ -44,7 +44,7 @@ function startGame() {
   score = 0;
   missScore = 0;
   button.style.visibility = 'hidden';
-  updateTimer(25); 
+  updateTimer(25);
   peep();
   timer = setInterval(() => {
     updateTimer(parseInt(timerDisplay.textContent) - 1);
@@ -65,11 +65,6 @@ function updateTimer(seconds) {
 function bonk(e) {
   if (!e.isTrusted) return;
   score++;
-
-  if (!this.classList.contains('up')) {
-    missScore++;
-    missScoreDisplay.textContent = missScore;
-  }
 
   this.classList.remove('up');
   scoreBoard.textContent = score;

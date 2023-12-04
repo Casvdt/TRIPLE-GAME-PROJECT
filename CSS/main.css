@@ -26,7 +26,7 @@ button {
     text-decoration: none;
     outline: none;
     color: #fff;
-    background-color: darkred;
+    background-color: #ac0b0b;
     border: none;
     border-radius: 15px;
 }
@@ -56,17 +56,13 @@ footer {
 }
 
 .tictactoebutton{
-margin-left: 240px;
+margin-right: 200px;
 }
 
 
 .whackamolebutton{
-    margin-left: 490px;
+    margin-left: 200px;
 } 
-
-.battleshipstbutton{
-    margin-left: 520px;
-}
 
 
  img {

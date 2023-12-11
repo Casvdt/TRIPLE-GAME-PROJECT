@@ -453,6 +453,11 @@ body {
   cursor: url(/IMG/Naamloos.png), auto;
 }
 
+
+.restartButton:hover {
+  cursor: url(/IMG/Naamloos.png), auto; 
+  background-color: rgb(199, 5, 5);
+}
 .restartButton:hover {
   cursor: url(/IMG/Naamloos.png), auto; 
   background-color: rgb(199, 5, 5);

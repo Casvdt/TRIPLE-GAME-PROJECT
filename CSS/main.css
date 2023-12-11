@@ -1,4 +1,4 @@
- html * {
+html * {
     margin:0;
     padding: 0;
     box-sizing: border-box;
@@ -26,7 +26,7 @@ button {
     text-decoration: none;
     outline: none;
     color: #fff;
-    background-color: #ac0b0b;
+    background-color: darkred;
     border: none;
     border-radius: 15px;
 }
@@ -56,13 +56,17 @@ footer {
 }
 
 .tictactoebutton{
-margin-right: 200px;
+margin-left: 240px;
 }
 
 
 .whackamolebutton{
-    margin-left: 200px;
+    margin-left: 490px;
 } 
+
+.battleshipstbutton{
+    margin-left: 520px;
+}
 
 
  img {
@@ -79,4 +83,3 @@ margin-right: 200px;
     text-align: center;
 
 }
-

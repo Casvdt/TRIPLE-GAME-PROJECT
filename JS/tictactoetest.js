@@ -4,9 +4,7 @@ const restartButton = document.querySelector(".restartButton");
 let firstplayerCredits = document.querySelector(".firstplayerCredits");
 let secondplayerCredits = document.querySelector(".secondplayerCredits");
 
-window.localStorage.setItem('username', 'Cas');
-
-const currentUserName = window.localStorage.getItem('username');
+let currentUserName = window.localStorage.getItem('username');
 
 const winConditions = [
     [0, 1, 2],
@@ -22,6 +20,17 @@ const winConditions = [
 let options = ["", "", "", "", "", "", "", "", ""];
 let currentPlayer = "X";
 let running = false;
+
+if (!currentUserName) {
+    // If the username is not stored, prompt for login
+    currentUserName = prompt("Enter your username:");
+
+    if (currentUserName) {
+        window.localStorage.setItem('username', currentUserName);
+    } else {
+        alert("Username is required. Please refresh the page and enter a valid username.");
+    }
+}
 
 initializeGame();
 
@@ -89,7 +98,6 @@ function checkWinner() {
 }
 
 function computerMove() {
-    
     const emptyCells = options.reduce((acc, value, index) => {
         if (value === "") {
             acc.push(index);
@@ -110,7 +118,7 @@ function restartGame() {
     currentPlayer = "X";
     options = ["", "", "", "", "", "", "", "", ""];
     turnText.textContent = `${currentPlayer}'s turn`;
-    cells.forEach((cell) => (cell.textContent = ""));
+    cells.forEach(cell => (cell.textContent = ""));
     running = true;
 
     if (currentPlayer === "O") {

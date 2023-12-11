@@ -136,6 +136,8 @@ td div {
 } */
 
 body {
+  background-image: url(/IMG/Garp.jpg.webp);
+  background-image: url(/IMG/luffy.jpg.jpg);
   margin: 0;
   background-color: #F3F3F3;
   overflow-x: hidden;
@@ -462,4 +464,12 @@ body {
   cursor: url(/IMG/Naamloos.png), auto; 
   background-color: rgb(199, 5, 5);
 
+}
+
+.luffy{
+height: 400px;
+}
+
+.garp{
+  height: 400px;
 }

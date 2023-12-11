@@ -1,12 +1,8 @@
 const cells = document.querySelectorAll(".cell");
 const turnText = document.querySelector(".turnText");
 const restartButton = document.querySelector(".restartButton");
-
-
-
-let player1Credits = 0;
-let playerCredits = document.querySelector(".playerCredits")          
-
+let firstplayerCredits = document.querySelector(".firstplayerCredits")     
+let secondplayerCredits = document.querySelector(".secondplayerCredits")     
 
 
 const winConditions = [

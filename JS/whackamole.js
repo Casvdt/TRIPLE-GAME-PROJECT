@@ -3,12 +3,15 @@ const scoreBoard = document.querySelector('.score');
 const missScoreDisplay = document.querySelector('.missScore');
 const timerDisplay = document.getElementById('timer');
 const moles = document.querySelectorAll('.mole');
+const highScoreDisplay = document.querySelector('.highscore'); 
 const button = document.querySelector('.start');
+const resetButton = document.querySelector('.reset'); 
 let lastHole;
 let timeUp = false;
 let score = 0;
 let missScore = 0;
 let timer;
+let highScore = 0; 
 
 function randomTime(min, max) {
   return Math.round(Math.random() * (max - min) + min);
@@ -53,9 +56,22 @@ function startGame() {
   setTimeout(() => {
     clearInterval(timer);
     timeUp = true;
+    if (score > highScore) {
+      highScore = score;
+      highScoreDisplay.textContent = highScore;
+    }
     button.innerHTML = 'Try again?';
     button.style.visibility = 'visible';
   }, 25000);
+}
+
+function resetGame() {
+  
+  highScore = 0;
+  highScoreDisplay.textContent = highScore;
+
+  
+  startGame();
 }
 
 function updateTimer(seconds) {
@@ -71,3 +87,4 @@ function bonk(e) {
 }
 
 moles.forEach(mole => mole.addEventListener('click', bonk));
+localStorage.setItem("lastname", "Stef");

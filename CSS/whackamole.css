@@ -1,5 +1,7 @@
 @import url('https://fonts.googleapis.com/css?family=Nunito');
 
+
+
 html{cursor: url(/IMG/Naamloos.png), auto; }
 
 *, *:before, *:after {
@@ -108,6 +110,18 @@ h2 {
   cursor: url(/IMG/Naamloos.png), auto; 
   
 }
+
+.highscore {
+  background: rgb(153, 44, 44);
+  padding: 0 3rem;
+  line-height: 1;
+  -webkit-border-radius: 1rem;
+  -moz-border-radius: 1rem;
+  border-radius: 1rem;
+  color: #3b1010;
+  }
+
+
 
 
 

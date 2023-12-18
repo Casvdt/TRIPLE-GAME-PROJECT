@@ -44,7 +44,7 @@ function cellClicked() {
 
    
     if (running && currentPlayer === "O") {
-        setTimeout(computerMove, 1000); // Delay for better user experience
+        setTimeout(computerMove, 500); // Delay for better user experience
     }
 }
 
@@ -90,11 +90,11 @@ function checkWinner() {
 
 function computerMove() {
     
-    const emptyCells = options.reduce((acc, value, index) => {
+    const emptyCells = options.reduce((blub, value, index) => {
         if (value === "") {
-            acc.push(index);
+            blub.push(index);
         }
-        return acc;
+        return blub;
     }, []);
 
     if (emptyCells.length > 0) {

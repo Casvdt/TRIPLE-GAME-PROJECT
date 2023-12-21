@@ -1,6 +1,7 @@
 const cells = document.querySelectorAll(".cell");
 const turnText = document.querySelector(".turnText");
 const restartButton = document.querySelector(".restartButton");
+const usernameButton = document.querySelector(".usernameButton");
 let firstplayerCredits = document.querySelector(".firstplayerCredits");
 let secondplayerCredits = document.querySelector(".secondplayerCredits");
 
@@ -132,4 +133,9 @@ function updateWins() {
 }
 
 
-window.localStorage.setItem('username', 'Cas'); //Slaat Cas op als username
+
+
+
+
+
+// window.localStorage.setItem('username', 'Cas'); //Slaat Cas op als username

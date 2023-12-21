@@ -3,15 +3,30 @@ const scoreBoard = document.querySelector('.score');
 const missScoreDisplay = document.querySelector('.missScore');
 const timerDisplay = document.getElementById('timer');
 const moles = document.querySelectorAll('.mole');
-const highScoreDisplay = document.querySelector('.highscore'); 
+const highScoreDisplay = document.querySelector('.highscore');
 const button = document.querySelector('.start');
-const resetButton = document.querySelector('.reset'); 
+const resetButton = document.querySelector('.reset');
+const userBtn = document.querySelector('.userBtn');
 let lastHole;
 let timeUp = false;
 let score = 0;
 let missScore = 0;
 let timer;
-let highScore = 0; 
+let highScore = 0;
+
+function myUsername() {
+  let text;
+  let person = prompt("Please Whrite a short sentence:", "");
+  if (person == null || person == "") {
+    text = "User cancelled the prompt.";
+  } else {
+    text = person;
+  }
+
+  document.querySelector(".demo").innerHTML = text;
+}
+
+
 
 function randomTime(min, max) {
   return Math.round(Math.random() * (max - min) + min);
@@ -66,11 +81,11 @@ function startGame() {
 }
 
 function resetGame() {
-  
+
   highScore = 0;
   highScoreDisplay.textContent = highScore;
 
-  
+
   startGame();
 }
 

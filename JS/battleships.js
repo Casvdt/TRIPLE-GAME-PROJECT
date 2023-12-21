@@ -460,3 +460,15 @@ document.addEventListener('DOMContentLoaded', () => {
 	}
   })
   
+  let firstPlayerWins = 0;
+let secondPlayerWins = 0;
+
+function updateWins() {
+    if (currentPlayer === "X") {
+        firstPlayerWins++;
+        firstplayerCredits.textContent = firstPlayerWins;
+    } else {
+        secondPlayerWins++;
+        secondplayerCredits.textContent = secondPlayerWins;
+    }
+}

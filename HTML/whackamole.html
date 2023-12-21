@@ -1,57 +1,66 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="/CSS/whackamole.css">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="/CSS/whackamole.css">
 </head>
+
 <body>
+  
+  <header>
     <h1>Whack-a-mole!</h1>
-    <h2>You have: <span id="timer">0</span> seconds remaining!</h2>
+    <h2>seconds remaining: <span id="timer"></span> </h2>
     <h2>Score: <span class="score">0</span></h2>
-<h2>Miss: <span class="missScore">0</span></h2>
-  <h2>high Score: <span class="highscore">0</span></h2>
+    <p class="demo"></p>
+      <button class="Userbtn" onclick="myUsername()">Add Username</button>
+    <h2>Miss: <span class="missScore">0</span></h2>
+    <h2>high Score: <span class="highscore">0</span></h2>
 
-<button class="start" onClick="startGame()">Start</button>
+    <button class="start" onClick="startGame()">Start</button>
+  </header>
+  <main>
+    <div class="game">
+      <div class="hole hole1">
+        <div class="mole"></div>
+      </div>
+      <div class="hole hole2">
+        <div class="mole"></div>
+      </div>
+      <div class="hole hole3">
+        <div class="mole"></div>
+      </div>
+      <div class="hole hole4">
+        <div class="mole"></div>
+      </div>
+      <div class="hole hole5">
+        <div class="mole"></div>
+      </div>
+      <div class="hole hole6">
+        <div class="mole"></div>
+      </div>
+      <div class="hole hole7">
+        <div class="mole"></div>
+      </div>
+      <div class="hole hole8">
+        <div class="mole"></div>
+      </div>
+      <div class="hole hole9">
+        <div class="mole"></div>
+      </div>
+    </div>
+    </div>
+  </main>
 
-<div class="game">
-  <div class="hole hole1">
-    <div class="mole"></div>
+  <div class="achtergrond-geluid">
+    <audio controls autoplay loop hidden>
+      <source src="/AUDIO/Mario Kart Wii - Coconut Mall [Remix].mp3">
+    </audio>
   </div>
-  <div class="hole hole2">
-    <div class="mole"></div>
-  </div>
-  <div class="hole hole3">
-    <div class="mole"></div>
-  </div>
-  <div class="hole hole4">
-    <div class="mole"></div>
-  </div>
-  <div class="hole hole5">
-    <div class="mole"></div>
-  </div>
-  <div class="hole hole6">
-    <div class="mole"></div>
-  </div>
-  <div class="hole hole7">
-    <div class="mole"></div>
-  </div>
-  <div class="hole hole8">
-    <div class="mole"></div>
-  </div>
-  <div class="hole hole9">
-    <div class="mole"></div>
-  </div>
-</div>
-</div>
-
-<div class="achtergrond-geluid">
-<audio controls autoplay loop hidden> 
-    <source src="/AUDIO/Mario Kart Wii - Coconut Mall [Remix].mp3">
-</audio>
-</div>
-    <script src="/JS/whackamole.js"></script>
+  <script src="/JS/whackamole.js"></script>
 </body>
+
 </html>

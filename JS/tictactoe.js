@@ -1,11 +1,29 @@
 const cells = document.querySelectorAll(".cell");
 const turnText = document.querySelector(".turnText");
 const restartButton = document.querySelector(".restartButton");
-const usernameButton = document.querySelector(".usernameButton");
+const usernameButton = document.querySelector(".Userbtn");
 let firstplayerCredits = document.querySelector(".firstplayerCredits");
 let secondplayerCredits = document.querySelector(".secondplayerCredits");
 
-window.localStorage.setItem('username', 'Cas');
+// window.localStorage.setItem('username', 'Cas');
+
+
+function myUsername() {
+    let text;
+    let person = prompt("Please choose a username:", "");
+    if (person == null || person == "") {
+      text = "Anonymous";
+    } else {
+      text = person;
+    }
+  
+    document.querySelector(".demo").innerHTML = text;
+  }
+
+  usernameButton.addEventListener("click", myUsername);
+
+ 
+
 
 const currentUserName = window.localStorage.getItem('username');
 

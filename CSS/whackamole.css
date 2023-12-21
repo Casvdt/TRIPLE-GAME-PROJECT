@@ -123,6 +123,7 @@ h2 {
   -moz-border-radius: 1rem;
   border-radius: 1rem;
   color: #3b1010;
+  
 }
 
 .Userbtn {
@@ -137,6 +138,7 @@ h2 {
   background-color: darkred;
   border: none;
   border-radius: 15px;
+  margin-right: 1500px;
 }
 
 .Userbtn:hover {

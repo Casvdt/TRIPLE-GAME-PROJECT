@@ -95,3 +95,9 @@ html{cursor: url(/IMG/Naamloos.png), auto;}
 .input{
   margin-top: 50px;
 }
+
+.demo {
+  margin-right: 1500px;
+  font-size: 30px;
+  font-family: 'Indie Flower', 'Comic Sans', cursive;
+}

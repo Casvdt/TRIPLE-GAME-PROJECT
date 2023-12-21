@@ -1,68 +1,67 @@
-
 html{cursor: url(/IMG/Naamloos.png), auto; }
 h1 {
     text-align: center;
     color: #f50a0a;
 }
 /* * {
-	padding: 0;
-	margin: 0;
-	box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
 }
-
+ 
 body {
   cursor: url(/IMG/Naamloos.png), auto;
-	background: #000000;
+  background: #000000;
 }
-
+ 
 #board {
-	position: relative;
-	width: 100%;
-	min-width: 550px;
+  position: relative;
+  width: 100%;
+  min-width: 550px;
 }
-
+ 
 #messageArea {
-	width: 100%;
-	text-align: center;
-	margin-top: 5px;
-	color: #ffffff;
-	font-family: "Fascinate Inline";
-	font-size: 25px;
+  width: 100%;
+  text-align: center;
+  margin-top: 5px;
+  color: #ffffff;
+  font-family: "Fascinate Inline";
+  font-size: 25px;
 }
-
+ 
 table {
-	border-collapse: separate;
-	border-spacing: 3px;
-	margin: 0 auto;
+  border-collapse: separate;
+  border-spacing: 3px;
+  margin: 0 auto;
 }
-
+ 
 td {
-	position: relative;
-	width: 70px;
-	height: 70px;
-	border: 2px solid #ffffff;
-	border-radius: 15px;
+  position: relative;
+  width: 70px;
+  height: 70px;
+  border: 2px solid #ffffff;
+  border-radius: 15px;
 }
-
+ 
 td:hover {
-	background: #7a0909;
+  background: #7a0909;
 }
-
+ 
 td div {
- 	width: 70px;
-	height: 70px;
+  width: 70px;
+  height: 70px;
  }
-
+ 
 .numbers, .letters {
-	text-align: center;
-	font-size: 20px;
-	font-family: "Baloo Bhaina";
-	color: #f4f8ff;
-	height: 40px;
-	width: 40px;
-	border: none;
+  text-align: center;
+  font-size: 20px;
+  font-family: "Baloo Bhaina";
+  color: #f4f8ff;
+  height: 40px;
+  width: 40px;
+  border: none;
 }
-
+ 
 .hit {
   position: absolute;
   bottom: 5px;
@@ -73,12 +72,12 @@ td div {
   border-radius: 5px 5px 50px 35px;
   animation: wave 1s ease-in-out infinite alternate;
 }
-
+ 
  @keyframes wave {
   0% {transform: rotate(-7deg)}
   100% {transform: rotate(5deg)}
 }
-
+ 
 .hit::after {
   content: '';
   position: absolute;
@@ -86,12 +85,12 @@ td div {
   left: 8px;
   width: 10px;
   height: 10px;
-  background: #D2995F; 
+  background: #D2995F;
   border-radius: 50%;
   box-shadow: 15px 0 #FCCE9E,
               30px 0 #D2995F;
 }
-
+ 
 .hit::before {
   content: '';
   position: absolute;
@@ -102,7 +101,7 @@ td div {
   background: #5A0400;
   box-shadow: 15px 4px 0 -4px #AC3B35;  
 }
-
+ 
 .miss {
   width: 60px;
   height: 10px;
@@ -116,14 +115,14 @@ td div {
   box-shadow: 3px 3px #700000;
   animation: blow 0.5s ease-in;
 }
-
+ 
 @keyframes blow {
   0% {transform: scale(0);}
   1% {transform: rotate(45deg);}
   80% {transform: scale(1.7);}
   100% {transform: scale(1);}
 }
-
+ 
 .miss::after {
   content: '';
   width: 60px;
@@ -134,19 +133,19 @@ td div {
   transform: rotate(90deg);
   box-shadow: 3px -3px #ffffff;
 } */
-
+ 
 body {
   margin: 0;
   background-color: #F3F3F3;
   overflow-x: hidden;
 }
-<<<<<<< HEAD
 
+ 
 *, *::before, *::after {
   font-family: 'Montserrat', sans-serif;
   box-sizing: border-box;
 }
-
+ 
 .splash-container {
   display: flex;
   flex-direction: column;
@@ -154,12 +153,12 @@ body {
   align-items: center;
   height: 66vh;
 }
-
+ 
 .splash-title {
   font-family: 'Bangers', cursive;
   font-size: 10rem;
 }
-
+ 
 .splash-battleship-image {
   position: absolute;
   bottom: 5vh;
@@ -169,7 +168,7 @@ body {
   pointer-events: none;
   opacity: .25;
 }
-
+ 
 .btn {
   font-size: inherit;
   background-color: hsl(30, 100%, 50%);
@@ -181,26 +180,26 @@ body {
   border-radius: .2em;
   color: #333;
 }
-
+ 
 .btn:hover, .btn:focus {
   background-color: hsl(30, 100%, 40%);
 }
-
+ 
 .splash-btn {
   font-size: 2rem;
   margin-left: 2rem;
 }
-
+ 
 .splash-btn:first-child {
   margin-left: 0;
 }
-
+ 
 .container {
   display: flex;
   justify-content: center;
   width: 100%;
 }
-
+ 
 .battleship-grid {
   margin: 2vmin;
   display: grid;
@@ -208,43 +207,43 @@ body {
   grid-template-rows: repeat(10, 4.6vmin);
   grid-template-columns: repeat(10, 4.6vmin);
 }
-
+ 
 .grid-computer > .taken,
 .grid-computer > .boom {
   background-color: hsl(200, 100%, 50%) !important;
   border-radius: 0 !important;
 }
-
+ 
 .taken,
 .ship {
   position: relative;
   background-color: hsl(0, 0%, 80%);
 }
-
+ 
 .taken.start.vertical,
 .taken.start.vertical::before {
   border-top-left-radius: 50%;
   border-top-right-radius: 50%;
 }
-
+ 
 .taken.end.vertical,
 .taken.end.vertical::before {
   border-bottom-left-radius: 50%;
   border-bottom-right-radius: 50%;
 }
-
+ 
 .taken.start.horizontal,
 .taken.start.horizontal::before {
   border-top-left-radius: 50%;
   border-bottom-left-radius: 50%;
 }
-
+ 
 .taken.end.horizontal,
 .taken.end.horizontal::before {
   border-top-right-radius: 50%;
   border-bottom-right-radius: 50%;
 }
-
+ 
 .taken.vertical::before,
 .taken.horizontal::before {
   content: '';
@@ -255,52 +254,52 @@ body {
   left: -1px;
   right: -1px;
 }
-
+ 
 .taken.horizontal::before {
   animation: ripplesY 3s linear infinite;
   border-left: none;
   border-right: none;
 }
-
+ 
 .taken.vertical::before {
   animation: ripplesX 3s linear infinite;
   border-top: none;
   border-bottom: none;
 }
-
+ 
 @keyframes ripplesX {
   0% {
     opacity: 1;
     transform: scaleX(1);
   }
-
+ 
   100% {
     opacity: 0;
     transform: scaleX(1.5);
   }
 }
-
+ 
 @keyframes ripplesY {
   0% {
     opacity: 1;
     transform: scaleY(1);
   }
-
+ 
   100% {
     opacity: 0;
     transform: scaleY(1.5);
   }
 }
-
+ 
 .grid-display {
   display: flex;
 }
-
+ 
 .ship > div {
   width: 4.6vmin;
   height: 4.6vmin;
 }
-
+ 
 .ship {
   display: flex;
   flex-wrap: wrap;
@@ -309,66 +308,66 @@ body {
   height: calc(4.6vmin * var(--height, 1));
   border-radius: 2.3vmin;
 }
-
+ 
 .battleship-grid div {
   border: 1px solid hsla(0, 0%, 100%, .2);
 }
-
+ 
 .destroyer-container {
   --width: 2;
 }
-
+ 
 .destroyer-container-vertical {
   --height: 2;
   --width: 1;
 }
-
+ 
 .submarine-container,
 .cruiser-container {
   --width: 3;
 }
-
+ 
 .submarine-container-vertical,
 .cruiser-container-vertical {
   --height: 3;
   --width: 1;
 }
-
+ 
 .battleship-container {
   --width: 4;
 }
-
+ 
 .battleship-container-vertical {
   --height: 4;
   --width: 1;
 }
-
+ 
 .carrier-container {
   --width: 5;
 }
-
+ 
 .carrier-container-vertical {
   --height: 5;
   --width: 1;
 }
-
+ 
 .hidden-info {
   font-size: 1.5rem;
   align-items: center;
   flex-direction: column;
 }
-
+ 
 .info-text {
   margin: 1rem;
 }
-
+ 
 .miss,
 .boom {
   display: flex;
   justify-content: center;
   align-items: center;
 }
-
+ 
 .boom::after,
 .miss::after {
   content: '';
@@ -377,15 +376,15 @@ body {
   width: 2vmin;
   height: 2vmin;
 }
-
+ 
 .miss::after {
   background-color: white;
 }
-
+ 
 .boom::after {
   background-color: red;
 }
-
+ 
 .miss::before {
   content: '';
   position: absolute;
@@ -395,66 +394,40 @@ body {
   width: 2vmin;
   height: 2vmin;
 }
-
+ 
 .boom {
   animation: boom .2s ease-out forwards;
 }
-
+ 
 @keyframes hit {
   0% {
     opacity: 1;
     transform: scale(0);
   }
-
+ 
   100% {
     opacity: 0;
     transform: scale(4);
   }
 }
-
+ 
 @keyframes boom {
   0% {
     background-color: red;
   }
-
+ 
   100% {
     background-color: hsl(0, 0%, 80%);
   }
 }
-
+ 
 .player {
   margin: 2vmin;
 }
-
+ 
 .connected, .ready {
   font-weight: normal;
   opacity: .25;
   text-decoration: line-through;
 }
-
-.connected.active,
-.ready.active {
-  opacity: 1;
-  text-decoration: none;
-=======
-.restartButton {
-  display: inline-block;
-  padding: 15px 25px;
-  font-size: 20px;
-  text-align: center;
-  text-decoration: none;
-  outline: none;
-  color: #fff;
-  background-color: darkred;
-  border: none;
-  border-radius: 15px;
-  margin-top: 100px;
-  margin-left: 900px;
-  cursor: url(/IMG/Naamloos.png), auto;
-}
-
-.restartButton:hover {
-  cursor: url(/IMG/Naamloos.png), auto; 
-  background-color: rgb(199, 5, 5);
->>>>>>> 296c01faaf0774bc05c23acfffc2131911f43779
-}
+ 

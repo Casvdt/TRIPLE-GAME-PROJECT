@@ -42,7 +42,7 @@ function cellClicked() {
     updateCell(this, cellIndex);
     checkWinner();
 
-    // If the game is still running, let the computer make a move
+   
     if (running && currentPlayer === "O") {
         setTimeout(computerMove, 500); // Delay for better user experience
     }
@@ -90,11 +90,11 @@ function checkWinner() {
 
 function computerMove() {
     
-    const emptyCells = options.reduce((acc, value, index) => {
+    const emptyCells = options.reduce((blub, value, index) => {
         if (value === "") {
-            acc.push(index);
+            blub.push(index);
         }
-        return acc;
+        return blub;
     }, []);
 
     if (emptyCells.length > 0) {
@@ -114,7 +114,7 @@ function restartGame() {
     running = true;
 
     if (currentPlayer === "O") {
-        setTimeout(computerMove, 500);
+        setTimeout(computerMove, 1000);
     }
 }
 
@@ -130,3 +130,6 @@ function updateWins() {
         secondplayerCredits.textContent = secondPlayerWins;
     }
 }
+
+
+window.localStorage.setItem('username', 'Cas'); //Slaat Cas op als username

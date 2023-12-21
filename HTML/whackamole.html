@@ -10,48 +10,50 @@
 </head>
 
 <body>
-  <h1>Whack-a-mole!</h1>
-  <h2>You have: <span id="timer">0</span> seconds remaining!</h2>
-  <h2>Score: <span class="score">0</span></h2>
-  <p class="demo"></p>
-  <div class="button-wrapper">
-    <button class="Userbtn" onclick="myUsername()">Add Username</button>
-  </div>
-  <h2>Miss: <span class="missScore">0</span></h2>
-  <h2>high Score: <span class="highscore">0</span></h2>
+  
+  <header>
+    <h1>Whack-a-mole!</h1>
+    <h2>seconds remaining: <span id="timer"></span> </h2>
+    <h2>Score: <span class="score">0</span></h2>
+    <p class="demo"></p>
+      <button class="Userbtn" onclick="myUsername()">Add Username</button>
+    <h2>Miss: <span class="missScore">0</span></h2>
+    <h2>high Score: <span class="highscore">0</span></h2>
 
-  <button class="start" onClick="startGame()">Start</button>
-
-  <div class="game">
-    <div class="hole hole1">
-      <div class="mole"></div>
+    <button class="start" onClick="startGame()">Start</button>
+  </header>
+  <main>
+    <div class="game">
+      <div class="hole hole1">
+        <div class="mole"></div>
+      </div>
+      <div class="hole hole2">
+        <div class="mole"></div>
+      </div>
+      <div class="hole hole3">
+        <div class="mole"></div>
+      </div>
+      <div class="hole hole4">
+        <div class="mole"></div>
+      </div>
+      <div class="hole hole5">
+        <div class="mole"></div>
+      </div>
+      <div class="hole hole6">
+        <div class="mole"></div>
+      </div>
+      <div class="hole hole7">
+        <div class="mole"></div>
+      </div>
+      <div class="hole hole8">
+        <div class="mole"></div>
+      </div>
+      <div class="hole hole9">
+        <div class="mole"></div>
+      </div>
     </div>
-    <div class="hole hole2">
-      <div class="mole"></div>
     </div>
-    <div class="hole hole3">
-      <div class="mole"></div>
-    </div>
-    <div class="hole hole4">
-      <div class="mole"></div>
-    </div>
-    <div class="hole hole5">
-      <div class="mole"></div>
-    </div>
-    <div class="hole hole6">
-      <div class="mole"></div>
-    </div>
-    <div class="hole hole7">
-      <div class="mole"></div>
-    </div>
-    <div class="hole hole8">
-      <div class="mole"></div>
-    </div>
-    <div class="hole hole9">
-      <div class="mole"></div>
-    </div>
-  </div>
-  </div>
+  </main>
 
   <div class="achtergrond-geluid">
     <audio controls autoplay loop hidden>

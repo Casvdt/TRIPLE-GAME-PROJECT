@@ -115,6 +115,7 @@ h2 {
 
 }
 
+
 .highscore {
   background: rgb(153, 44, 44);
   padding: 0 3rem;
@@ -123,7 +124,6 @@ h2 {
   -moz-border-radius: 1rem;
   border-radius: 1rem;
   color: #3b1010;
-  
 }
 
 .Userbtn {
@@ -151,5 +151,10 @@ h2 {
 }
 
 .demo {
-  font-size: 20px;
+  display: flex;
+  justify-content: 10px left;
+  left: 10px;
+  font-size: 30px;
+  right: 1500px;
+  color: white;
 }

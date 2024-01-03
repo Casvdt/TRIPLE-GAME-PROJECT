@@ -151,10 +151,7 @@ h2 {
 }
 
 .demo {
-  display: flex;
-  justify-content: 10px left;
-  left: 10px;
+  margin-right: 1500px;
   font-size: 30px;
-  right: 1500px;
   color: white;
 }

@@ -18,7 +18,7 @@ function myUsername() {
   let text;
   let person = prompt("Please Whrite a short sentence:", "");
   if (person == null || person == "") {
-    text = "User cancelled the prompt.";
+    text = "None";
   } else {
     text = person;
   }

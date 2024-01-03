@@ -14,9 +14,12 @@ let missScore = 0;
 let timer;
 let highScore = 0;
 
+
+
+
 function myUsername() {
   let text;
-  let person = prompt("Please Whrite a short sentence:", "");
+  let person = prompt("Please enter your username:", "");
   if (person == null || person == "") {
     text = "None";
   } else {
@@ -25,8 +28,6 @@ function myUsername() {
 
   document.querySelector(".demo").innerHTML = text;
 }
-
-
 
 function randomTime(min, max) {
   return Math.round(Math.random() * (max - min) + min);
@@ -53,7 +54,20 @@ function peep() {
     hole.classList.remove('up');
     if (!timeUp) peep();
   }, time);
+
+  // Check the score and add more holes when the score is 15
+  if (score >= 15) {
+    const additionalHoles = 1;
+    for (let i = 0; i < additionalHoles; i++) {
+      const additionalHole = randomHole(holes);
+      additionalHole.classList.add('up');
+      setTimeout(() => {
+        additionalHole.classList.remove('up');
+      }, time);
+    }
+  }
 }
+
 
 function startGame() {
   scoreBoard.textContent = 0;
@@ -81,11 +95,8 @@ function startGame() {
 }
 
 function resetGame() {
-
   highScore = 0;
   highScoreDisplay.textContent = highScore;
-
-
   startGame();
 }
 
@@ -96,7 +107,6 @@ function updateTimer(seconds) {
 function bonk(e) {
   if (!e.isTrusted) return;
   score++;
-
   this.classList.remove('up');
   scoreBoard.textContent = score;
 }

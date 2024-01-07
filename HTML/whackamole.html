@@ -15,11 +15,14 @@
     <h1>Whack a mole!</h1>
     <h2>seconds remaining: <span id="timer"></span> </h2>
     <h2>Score: <span class="score">0</span></h2>
-    <h2>Miss: <span class="missScore">0</span></h2>
+    <h2><span class="missScore"></span></h2>
     <h2>high Score: <span class="highscore">0</span></h2>
 
-    <button class="start" onClick="startGame()">Start</button>
+    <button class="start">Start</button>
   </header>
+  <div id="overlay" onclick="off()"></div>
+  <button class="rules" onclick="on()">Rules</button>
+
   <main>
     <div class="game">
       <div class="hole hole1">

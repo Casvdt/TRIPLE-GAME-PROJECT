@@ -10,7 +10,6 @@ const userBtn = document.querySelector('.userBtn');
 let lastHole;
 let timeUp = false;
 let score = 0;
-let missScore = 0;
 let timer;
 let highScore = 0;
 
@@ -70,11 +69,10 @@ function peep() {
 
 
 function startGame() {
+  
   scoreBoard.textContent = 0;
-  missScoreDisplay.textContent = 0;
   timeUp = false;
   score = 0;
-  missScore = 0;
   button.style.visibility = 'hidden';
   updateTimer(25);
   peep();
@@ -113,3 +111,27 @@ function bonk(e) {
 
 moles.forEach(mole => mole.addEventListener('click', bonk));
 localStorage.setItem("lastname", "Stef");
+
+moles.forEach((mole) => mole.addEventListener("click", bonk));
+
+holes.forEach((hole) =>
+  hole.addEventListener("click", () => {
+    if (!timeUp && !hole.classList.contains("up")) {
+      if (score > 0) {
+        score--;
+        scoreBoard.textContent = score;
+      }
+    }
+  })
+);
+
+function on() {
+  document.getElementById("overlay").style.display = "block";
+}
+
+function off() {
+  document.getElementById("overlay").style.display = "none";
+}
+
+button.addEventListener("click", startGame);
+

@@ -69,7 +69,7 @@ function peep() {
 
 
 function startGame() {
-  
+
   scoreBoard.textContent = 0;
   timeUp = false;
   score = 0;
@@ -134,4 +134,7 @@ function off() {
 }
 
 button.addEventListener("click", startGame);
+
+
+
 

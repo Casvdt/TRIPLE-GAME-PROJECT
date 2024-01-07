@@ -74,6 +74,11 @@ function startGame() {
   timeUp = false;
   score = 0;
   button.style.visibility = 'hidden';
+  
+  const rulesButton = document.querySelector('.rules');
+  rulesButton.classList.add('disabled');
+  rulesButton.style.display = 'none';
+  
   updateTimer(25);
   peep();
   timer = setInterval(() => {
@@ -83,6 +88,10 @@ function startGame() {
   setTimeout(() => {
     clearInterval(timer);
     timeUp = true;
+
+    rulesButton.classList.remove('disabled');
+    rulesButton.style.display = 'inline-block';
+    
     if (score > highScore) {
       highScore = score;
       highScoreDisplay.textContent = highScore;
@@ -97,6 +106,7 @@ function resetGame() {
   highScoreDisplay.textContent = highScore;
   startGame();
 }
+
 
 function updateTimer(seconds) {
   timerDisplay.textContent = seconds;
@@ -125,15 +135,30 @@ holes.forEach((hole) =>
   })
 );
 
+
+button.addEventListener("click", startGame);
+
+
+
+
+
+
+
 function on() {
-  document.getElementById("overlay").style.display = "block";
+  const overlays = document.getElementsByClassName("overlay");
+  for (const overlay of overlays) {
+    overlay.style.display = "block";
+  }
 }
 
 function off() {
-  document.getElementById("overlay").style.display = "none";
+  const overlays = document.getElementsByClassName("overlay");
+  for (const overlay of overlays) {
+    overlay.style.display = "none";
+  }
 }
 
-button.addEventListener("click", startGame);
+
 
 
 

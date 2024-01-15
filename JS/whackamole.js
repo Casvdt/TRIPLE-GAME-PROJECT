@@ -10,23 +10,23 @@ const userBtn = document.querySelector('.userBtn');
 let lastHole;
 let timeUp = false;
 let score = 0;
-let missScore = 0;
 let timer;
 let highScore = 0;
 
+
+
+
 function myUsername() {
   let text;
-  let person = prompt("Please Whrite a short sentence:", "");
+  let person = prompt("Please enter your username:", "");
   if (person == null || person == "") {
-    text = "User cancelled the prompt.";
+    text = "None";
   } else {
     text = person;
   }
 
   document.querySelector(".demo").innerHTML = text;
 }
-
-
 
 function randomTime(min, max) {
   return Math.round(Math.random() * (max - min) + min);
@@ -53,15 +53,32 @@ function peep() {
     hole.classList.remove('up');
     if (!timeUp) peep();
   }, time);
+
+  // Check the score and add more holes when the score is 15
+  if (score >= 15) {
+    const additionalHoles = 1;
+    for (let i = 0; i < additionalHoles; i++) {
+      const additionalHole = randomHole(holes);
+      additionalHole.classList.add('up');
+      setTimeout(() => {
+        additionalHole.classList.remove('up');
+      }, time);
+    }
+  }
 }
 
+
 function startGame() {
+
   scoreBoard.textContent = 0;
-  missScoreDisplay.textContent = 0;
   timeUp = false;
   score = 0;
-  missScore = 0;
   button.style.visibility = 'hidden';
+  
+  const rulesButton = document.querySelector('.rules');
+  rulesButton.classList.add('disabled');
+  rulesButton.style.display = 'none';
+  
   updateTimer(25);
   peep();
   timer = setInterval(() => {
@@ -71,6 +88,10 @@ function startGame() {
   setTimeout(() => {
     clearInterval(timer);
     timeUp = true;
+
+    rulesButton.classList.remove('disabled');
+    rulesButton.style.display = 'inline-block';
+    
     if (score > highScore) {
       highScore = score;
       highScoreDisplay.textContent = highScore;
@@ -81,13 +102,11 @@ function startGame() {
 }
 
 function resetGame() {
-
   highScore = 0;
   highScoreDisplay.textContent = highScore;
-
-
   startGame();
 }
+
 
 function updateTimer(seconds) {
   timerDisplay.textContent = seconds;
@@ -96,10 +115,51 @@ function updateTimer(seconds) {
 function bonk(e) {
   if (!e.isTrusted) return;
   score++;
-
   this.classList.remove('up');
   scoreBoard.textContent = score;
 }
 
 moles.forEach(mole => mole.addEventListener('click', bonk));
 localStorage.setItem("lastname", "Stef");
+
+moles.forEach((mole) => mole.addEventListener("click", bonk));
+
+holes.forEach((hole) =>
+  hole.addEventListener("click", () => {
+    if (!timeUp && !hole.classList.contains("up")) {
+      if (score > 0) {
+        score--;
+        scoreBoard.textContent = score;
+      }
+    }
+  })
+);
+
+
+button.addEventListener("click", startGame);
+
+
+
+
+
+
+
+function on() {
+  const overlays = document.getElementsByClassName("overlay");
+  for (const overlay of overlays) {
+    overlay.style.display = "block";
+  }
+}
+
+function off() {
+  const overlays = document.getElementsByClassName("overlay");
+  for (const overlay of overlays) {
+    overlay.style.display = "none";
+  }
+}
+
+
+
+
+
+

@@ -10,18 +10,58 @@
 </head>
 
 <body>
-  
+  <div class="overlay" onclick="off()">
+    <div class="text">
+      <article>
+        <p>Objective:</p>
+
+        <p>The goal of the game is to score as many points as possible by successfully whacking moles that randomly
+          appear
+          from their holes.</p>
+
+        <p> Game Setup:</p>
+
+        <p>The game board consists of multiple mole holes, each equipped with a mole that can pop up.
+          cursor is provided for players to use for whacking the mole(s).
+          After youve scored 15 points, a second mole will appear.</p>
+
+        <p>Scoring:</p>
+
+        <p>Each successfully whacked mole earns the player 1 point.
+          The score goes down when you miss or click a mole to late.</p>
+
+        <p>Game Duration:</p>
+
+        <p>The game takes 25 seconds.</p>
+
+        <p>Game Start:</p>
+
+        <p>Players start with their cursor on the game board.
+          The moles are initially hidden in their holes.</p>
+
+        <p>Gameplay:</p>
+
+        <p> When the game starts, moles will randomly pop up from their holes.
+          Players must quickly and accurately whack the moles with the mallet to score points.</p>
+
+        <p>Penalties:</p>
+
+        <p>Avoid hitting the game board or holes without moles, as this may result in penalties or point deductions.</p>
+      </article>
+    </div>
+  </div>
+
   <header>
-    <h1>Whack-a-mole!</h1>
+    <h1>Whack a mole!</h1>
     <h2>seconds remaining: <span id="timer"></span> </h2>
     <h2>Score: <span class="score">0</span></h2>
-    <p class="demo"></p>
-      <button class="Userbtn" onclick="myUsername()">Add Username</button>
-    <h2>Miss: <span class="missScore">0</span></h2>
+    <h2><span class="missScore"></span></h2>
     <h2>high Score: <span class="highscore">0</span></h2>
 
-    <button class="start" onClick="startGame()">Start</button>
+    <button class="start">Start</button>
   </header>
+  <button class="rules" onclick="on()">Rules</button>
+
   <main>
     <div class="game">
       <div class="hole hole1">
@@ -52,7 +92,8 @@
         <div class="mole"></div>
       </div>
     </div>
-    </div>
+    <p class="demo"></p>
+    <button class="Userbtn" onclick="myUsername()">Add Username</button>
   </main>
 
   <div class="achtergrond-geluid">
